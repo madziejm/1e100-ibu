@@ -74,4 +74,3 @@ Things seem to be straightforward when described in simple terms. However, we mi
 Flaws:
 * No baseline nor any accuracy, so we can't give full results.
 * Training could be faster, as mentioned before. It takes ca. 6 hours for SNAP Ratebeer on GCP 4-core instance. This dataset is quite big on the other hand.
-* 
