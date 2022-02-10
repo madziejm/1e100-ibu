@@ -1,10 +1,8 @@
 # 1e100 IBU
 
-
-
 ## Project description
 
-Reviews we encounter on the web often consist of textual description and numerical aspect scores typically presented with stars that mark how much one liked some aspects of an item being reviewed, eg. for beer one could rate aroma, palate (when discussing taste in a broader sense), head (foam), etc.
+Reviews we encounter on the web often consist of textual description and numerical aspect scores typically presented with stars that mark how much one liked some aspects of an item being reviewed, eg. for beer one could rate aroma, palate (when discussing taste in a broader sense), head (foam), etc.  
 The project is about exploring various approaches dealing with multi-aspect review sentiment.
 Multi-aspect means, that one gives a numerical score for many aspects eg. taste, smell and overall score for a beer review.
 
@@ -76,3 +74,4 @@ Things seem to be straightforward when described in simple terms. However, we mi
 Flaws:
 * No baseline nor any accuracy, so we can't give full results.
 * Training could be faster, as mentioned before. It takes ca. 6 hours for SNAP Ratebeer on GCP 4-core instance. This dataset is quite big on the other hand.
+* 
