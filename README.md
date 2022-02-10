@@ -29,7 +29,9 @@ The weights yielded when training for this task are highly interpretable can be 
 
 ### Rating prediction task
 
-We tried a paper-like approach and vector embeddings.
+We tried a paper-like approach and vector embeddings. The latter is just KNN for average/max pooled reviews.
+
+We mapped reviews to vectors using both FastText and distilled BERT. [FAISS library](https://github.com/facebookresearch/faiss) was used to index the mapped sentences. We copped with converting at most 1M reviews because of the high memory footprint.
 
 
 ### Hunga-Bunga
@@ -38,7 +40,7 @@ We felt a bit lost along the way with this task, so we considered SOTA (state of
 
 ## Data
 
-* At first, we got 3M ratebeer.com reviews dataset from [SNAP](https://snap.stanford.edu/data/web-RateBeer.html). The dataset is not publicly available as of 2021, but we managed to get it.
+* At first, we got a 3M ratebeer.com reviews dataset from [SNAP](https://snap.stanford.edu/data/web-RateBeer.html). The dataset is not publicly available as of 2021, but we managed to get it.
 * Later on, we introduced a new ca. 50K Polish beer reviews dataset by scrapping [ocen-piwo.pl](https://ocen-piwo.pl). We won't make it public because of unknown copyright.
 
 See dataset representation code for dataset samples.
@@ -55,7 +57,7 @@ All of the examples, methods and results are described in detail in the single [
 * When implementing log-softmax on our own for no explainable reason we got blocked by numerical issues. They can be solved using the log-sum-exp trick. One should use library log-softmax if available, regardless
 * We needed to sign up for the GCP trial in order to run time-consuming computations. Now we know how to use it for hosting a Jupyter notebook
 * Spacy is nice after you make it work, but it's overkill for our use. Torchtext is not nice (for example it returns a list of ints where we needed of LongTensor, isn't customisable), but it works
-* Simple or even obvious models can present really valuable results, because as we noticed the distributions of ratings that people give are rather exploitable and easy to infer
+* Simple or even obvious models can present really valuable results because as we noticed the distributions of ratings that people give are rather exploitable and easy to infer
 
 ## Further work
 
