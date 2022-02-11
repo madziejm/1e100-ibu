@@ -68,6 +68,7 @@ All of the examples, methods and results are described in detail in the single [
 * Get to know how to work with both git and Jupyter Notebooks: which diff tool to use?
 * Automate experiments further on our own or by learning PyTorch Lightning or a similar library that makes training easier. Run the segmentation many times and pick the model with the lowest validation NLL. Experiment on which stochastic optimization method performs best
 * Extend to other domains (similar like wine or different like products)
+* Remove duplicate code
 
 ## Closing Remarks
 
